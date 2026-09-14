@@ -1,16 +1,43 @@
-# React + Vite
+# Checkout React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto educacional desenvolvido para a avaliação do curso de desenvolvimento web com React.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Construir uma aplicação de checkout com carrinho fixo, formulário de pagamento fictício e telas de sucesso e falha. A compra será simulada no navegador, sem integração com serviços de pagamento.
 
-## React Compiler
+## Estado atual
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A estrutura inicial foi criada com React e Vite. A tela de apresentação está preparada; as funcionalidades do checkout serão implementadas nas próximas etapas.
 
-## Expanding the ESLint configuration
+## Tecnologias utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript e JSX
+- HTML e CSS
+- Vite
+- ESLint
+
+## Como executar
+
+É necessário ter Node.js e npm instalados.
+
+No terminal, dentro da pasta do projeto:
+
+1. Execute `npm install` para instalar as dependências.
+2. Execute `npm run dev` para iniciar o ambiente de desenvolvimento.
+3. Abra no navegador o endereço informado no terminal.
+
+## Outros comandos
+
+- `npm run lint`: verifica o código com ESLint.
+- `npm run build`: gera a versão de distribuição na pasta `dist`.
+- `npm run preview`: permite visualizar localmente a versão gerada pelo build.
+
+## Organização inicial
+
+- `src/main.jsx`: inicializa a aplicação React.
+- `src/App.jsx`: define o componente principal.
+- `src/index.css`: contém os estilos globais.
+- `src/App.css`: contém os estilos do componente principal.
+- `public/`: contém arquivos públicos.
