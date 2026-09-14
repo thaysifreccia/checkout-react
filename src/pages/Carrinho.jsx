@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import ItemCarrinho from "../components/ItemCarrinho.jsx";
 import ResumoCompra from "../components/ResumoCompra.jsx";
 import { produtos } from "../data/produtos.js";
@@ -16,6 +17,7 @@ function Carrinho() {
         })}
       </ul>
       <ResumoCompra total={total} />
+      <Link to="/pagamento">Finalizar compra</Link>
     </main>
   );
 }
