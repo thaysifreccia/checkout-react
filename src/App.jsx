@@ -1,10 +1,7 @@
-import './App.css'
-import Carrinho from './pages/Carrinho.jsx'
+import "./App.css";
+import Carrinho from "./pages/Carrinho.jsx";
 function App() {
-
-  return (
-      <Carrinho />
-  )
+  return <Carrinho />;
 }
 
-export default App
+export default App;
