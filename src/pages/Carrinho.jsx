@@ -2,11 +2,11 @@ import { Link } from "react-router";
 import ItemCarrinho from "../components/ItemCarrinho.jsx";
 import ResumoCompra from "../components/ResumoCompra.jsx";
 import { produtos } from "../data/produtos.js";
+import { calcularTotal } from "../utils/calcularTotal.js";
 
 function Carrinho() {
-  const total = produtos.reduce((acumulador, produto) => {
-    return acumulador + produto.precoUnitario * produto.quantidade;
-  }, 0);
+  const total = calcularTotal(produtos);
+
   return (
     <main>
       <h1>Carrinho</h1>
