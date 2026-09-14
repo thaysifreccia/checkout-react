@@ -1,12 +1,9 @@
 import './App.css'
-
+import Carrinho from './pages/Carrinho.jsx'
 function App() {
 
   return (
-      <main>
-        <h1>Checkout</h1>
-        <p>Confira seu carrinho e finalize sua compra.</p>
-      </main>
+      <Carrinho />
   )
 }
 
