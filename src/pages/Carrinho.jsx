@@ -11,13 +11,15 @@ function Carrinho() {
     <main>
       <h1>Carrinho</h1>
       <p>Confira seu carrinho e finalize sua compra.</p>
-      <ul>
+      <ul className="lista-produtos">
         {produtos.map((produto) => {
           return <ItemCarrinho key={produto.id} produto={produto} />;
         })}
       </ul>
       <ResumoCompra total={total} />
-      <Link to="/pagamento">Finalizar compra</Link>
+      <Link className="acao-principal" to="/pagamento">
+        Finalizar compra
+      </Link>
     </main>
   );
 }

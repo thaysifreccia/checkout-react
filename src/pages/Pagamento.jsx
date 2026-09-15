@@ -42,11 +42,14 @@ function Pagamento() {
 
       <ResumoCompra total={total} />
 
-      <form onSubmit={handleSubmit(enviarFormulario)}>
+      <form
+        className="formulario-pagamento"
+        onSubmit={handleSubmit(enviarFormulario)}
+      >
         <h2>Dados do cartão</h2>
         <p>Preencha com dados fictícios.</p>
 
-        <div>
+        <div className="campo-formulario">
           <label htmlFor="titular">Titular</label>
           <input
             id="titular"
@@ -62,7 +65,7 @@ function Pagamento() {
           )}
         </div>
 
-        <div>
+        <div className="campo-formulario">
           <label htmlFor="numeroCartao">Número do cartão</label>
           <input
             id="numeroCartao"
@@ -81,7 +84,7 @@ function Pagamento() {
           )}
         </div>
 
-        <div>
+        <div className="campo-formulario">
           <label htmlFor="validade">Validade (MM/AA)</label>
           <input
             id="validade"
@@ -98,7 +101,7 @@ function Pagamento() {
           )}
         </div>
 
-        <div>
+        <div className="campo-formulario">
           <label htmlFor="cvv">CVV</label>
           <input
             id="cvv"
@@ -116,7 +119,7 @@ function Pagamento() {
         </div>
 
         <p role="status">{processando ? "Processando compra..." : ""}</p>
-        <button type="submit" disabled={processando}>
+        <button className="acao-principal" type="submit" disabled={processando}>
           Pagar
         </button>
       </form>

@@ -5,7 +5,9 @@ function Sucesso() {
     <main>
       <h1>Compra aprovada</h1>
       <p>Sua compra foi realizada com sucesso.</p>
-      <Link to="/">Voltar ao carrinho</Link>
+      <Link className="acao-principal" to="/">
+        Voltar ao carrinho
+      </Link>
     </main>
   );
 }

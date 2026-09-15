@@ -5,7 +5,9 @@ function Falha() {
     <main>
       <h1>Compra não aprovada</h1>
       <p>tentativa de golpe</p>
-      <Link to="/pagamento">Tentar novamente</Link>
+      <Link className="acao-principal" to="/pagamento">
+        Tentar novamente
+      </Link>
     </main>
   );
 }
