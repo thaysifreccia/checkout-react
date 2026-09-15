@@ -4,7 +4,7 @@ function ItemCarrinho({ produto }) {
   const subtotal = produto.precoUnitario * produto.quantidade;
 
   return (
-    <li>
+    <li className="item-carrinho">
       <h2>{produto.nome}</h2>
       <p>Preço unitário: {formatarMoeda(produto.precoUnitario)}</p>
       <p>Quantidade: {produto.quantidade}</p>
