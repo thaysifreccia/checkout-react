@@ -4,11 +4,11 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  background-color: #f5f5f5;
-  color: #222;
+  background-color: #fff8ef;
+  color: #30283d;
 }
 
 input,
