@@ -6,10 +6,11 @@ export const pagamentoSchema = z.object({
   numeroCartao: z
     .string()
     .transform((valor) => valor.replace(/[ -]/g, ""))
-    .pipe(
-      z.string().regex(/^[0-9]{16}$/, "Informe um cartão com 16 dígitos.")
-    ),
+    .pipe(z.string().regex(/^[0-9]{16}$/, "Informe um cartão com 16 dígitos.")),
   validade: z
     .string()
-    .regex(/^(0[1-9]|1[0-2])\/[0-9]{2}$/, "Informe a validade no formato MM/AA, com mês entre 01 e 12.")
+    .regex(
+      /^(0[1-9]|1[0-2])\/[0-9]{2}$/,
+      "Informe a validade no formato MM/AA, com mês entre 01 e 12.",
+    ),
 });
