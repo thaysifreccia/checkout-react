@@ -1,11 +1,16 @@
+import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ResumoCompra from "../components/ResumoCompra.jsx";
 import { produtos } from "../data/produtos.js";
 import { calcularTotal } from "../utils/calcularTotal.js";
 import { pagamentoSchema } from "../schemas/pagamentoSchema.js";
+import { usePagamento } from "../hooks/usePagamento.js";
 
 function Pagamento() {
+  const navigate = useNavigate();
+  const { processando, executarPagamento } = usePagamento();
+
   const {
     register,
     handleSubmit,
@@ -16,8 +21,18 @@ function Pagamento() {
 
   const total = calcularTotal(produtos);
 
-  function enviarFormulario(dados) {
-    console.log("Dados do formulario:", dados);
+  async function enviarFormulario(dados) {
+    if (processando) {
+      return;
+    }
+
+    const resultado = await executarPagamento(dados.numeroCartao);
+
+    if (resultado) {
+      navigate("/sucesso");
+    } else {
+      navigate("/falha");
+    }
   }
 
   return (
@@ -100,7 +115,10 @@ function Pagamento() {
           )}
         </div>
 
-        <button type="submit">Pagar</button>
+        <p role="status">{processando ? "Processando compra..." : ""}</p>
+        <button type="submit" disabled={processando}>
+          Pagar
+        </button>
       </form>
     </main>
   );
